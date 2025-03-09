@@ -9,9 +9,8 @@
 [![Laravel VUE admin panel preview](https://user-images.githubusercontent.com/6037466/184547401-1c481008-e013-4ba0-b9a8-3eaf3ff7b9a1.png)](https://github.com/balajidharma/laravel-vue-admin-panel)
 
 ## Built with
-- [Laravel 11](https://github.com/laravel/framework)
+- [Laravel 12](https://github.com/laravel/framework)
 - [spatie/laravel-permission](https://github.com/spatie/laravel-permission)
-- [Laravel Breeze](https://github.com/laravel/breeze)
 - [balajidharma/laravel-menu](https://github.com/balajidharma/laravel-menu)
 - [Vue 3](https://vuejs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
