@@ -145,7 +145,7 @@ const form = useForm({
             <BaseButton
               type="submit"
               color="info"
-              label="Submit"
+              label="提交"
               :class="{ 'opacity-25': form.processing }"
               :disabled="form.processing"
             />

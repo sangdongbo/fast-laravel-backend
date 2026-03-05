@@ -28,17 +28,17 @@ const form = useForm({
 
 <template>
   <LayoutAuthenticated>
-    <Head title="Update permission" />
+    <Head title="更新权限" />
     <SectionMain>
       <SectionTitleLineWithButton
         :icon="mdiAccountKey"
-        title="Update permission"
+        title="更新权限"
         main
       >
         <BaseButton
           :route-name="route('admin.permission.index')"
           :icon="mdiArrowLeftBoldOutline"
-          label="Back"
+          label="返回"
           color="white"
           rounded-full
           small
@@ -49,13 +49,13 @@ const form = useForm({
         @submit.prevent="form.post(route('admin.permission.update', props.permission.id))"
       >
         <FormField
-          label="Name"
+          label="名称"
           :class="{ 'text-red-400': form.errors.name }"
         >
           <FormControl
             v-model="form.name"
             type="text"
-            placeholder="Enter Name"
+            placeholder="输入名称"
             :error="form.errors.name"
           >
             <div class="text-red-400 text-sm" v-if="form.errors.name">
@@ -68,7 +68,7 @@ const form = useForm({
             <BaseButton
               type="submit"
               color="info"
-              label="Submit"
+              label="提交"
               :class="{ 'opacity-25': form.processing }"
               :disabled="form.processing"
             />

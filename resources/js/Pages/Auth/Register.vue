@@ -37,7 +37,7 @@ const submit = () => {
 
 <template>
   <LayoutGuest>
-    <Head title="Register" />
+    <Head title="注册" />
 
     <SectionFullScreen
       v-slot="{ cardClass }"
@@ -52,9 +52,9 @@ const submit = () => {
         <FormValidationErrors />
 
         <FormField
-          label="Name"
+          label="名称"
           label-for="name"
-          help="Please enter your name"
+          help="请输入名称"
         >
           <FormControl
             v-model="form.name"
@@ -67,9 +67,9 @@ const submit = () => {
         </FormField>
 
         <FormField
-          label="Email"
+          label="邮箱"
           label-for="email"
-          help="Please enter your email"
+          help="请输入邮箱"
         >
           <FormControl
             v-model="form.email"
@@ -82,9 +82,9 @@ const submit = () => {
         </FormField>
 
         <FormField
-          label="Password"
+          label="密码"
           label-for="password"
-          help="Please enter new password"
+          help="请输入新密码"
         >
           <FormControl
             v-model="form.password"
@@ -97,9 +97,9 @@ const submit = () => {
         </FormField>
 
         <FormField
-          label="Confirm Password"
+          label="确认密码"
           label-for="password_confirmation"
-          help="Please confirm your password"
+          help="请确认密码"
         >
           <FormControl
             v-model="form.password_confirmation"
@@ -115,7 +115,7 @@ const submit = () => {
           v-if="hasTermsAndPrivacyPolicyFeature"
           v-model="form.terms"
           name="remember"
-          :options="{ agree: 'I agree to the Terms' }"
+          :options="{ agree: '我同意服务条款' }"
         />
 
         <BaseDivider />
@@ -124,7 +124,7 @@ const submit = () => {
           <BaseButton
             type="submit"
             color="info"
-            label="Register"
+            label="注册"
             :class="{ 'opacity-25': form.processing }"
             :disabled="form.processing"
           />
@@ -132,7 +132,7 @@ const submit = () => {
             :route-name="route('login')"
             color="info"
             outline
-            label="Login"
+            label="登录"
           />
         </BaseButtons>
       </CardBox>

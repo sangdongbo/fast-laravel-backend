@@ -42,7 +42,7 @@ const submit = () => {
 
 <template>
   <LayoutGuest>
-    <Head title="Login" />
+    <Head title="登录" />
 
     <SectionFullScreen
       v-slot="{ cardClass }"
@@ -55,7 +55,7 @@ const submit = () => {
       >
         <FormValidationErrors />
 
-        <NotificationBarInCard 
+        <NotificationBarInCard
           v-if="status"
           color="info"
         >
@@ -63,9 +63,9 @@ const submit = () => {
         </NotificationBarInCard>
 
         <FormField
-          label="Email"
+          label="邮箱"
           label-for="email"
-          help="Please enter your email"
+          help="请输入邮箱"
         >
           <FormControl
             v-model="form.email"
@@ -78,9 +78,9 @@ const submit = () => {
         </FormField>
 
         <FormField
-          label="Password"
+          label="密码"
           label-for="password"
-          help="Please enter your password"
+          help="请输入密码"
         >
           <FormControl
             v-model="form.password"
@@ -95,7 +95,7 @@ const submit = () => {
         <FormCheckRadioGroup
           v-model="form.remember"
           name="remember"
-          :options="{ remember: 'Remember' }"
+          :options="{ remember: '记住我' }"
         />
 
         <BaseDivider />
@@ -105,7 +105,7 @@ const submit = () => {
             <BaseButton
               type="submit"
               color="info"
-              label="Login"
+              label="登录"
               :class="{ 'opacity-25': form.processing }"
               :disabled="form.processing"
             />
@@ -114,13 +114,13 @@ const submit = () => {
               :route-name="route('password.request')"
               color="info"
               outline
-              label="Remind"
+              label="重置密码"
             />
           </BaseButtons>
           <Link
             :href="route('register')"
           >
-            Register
+            注册
           </Link>
         </BaseLevel>
       </CardBox>

@@ -54,7 +54,7 @@ const submit = () => {
         <FormField
           label="Email"
           label-for="email"
-          help="Please enter your email"
+          help="请输入邮箱"
         >
           <FormControl
             v-model="form.email"

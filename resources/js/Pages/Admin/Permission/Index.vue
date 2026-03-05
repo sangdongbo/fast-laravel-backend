@@ -47,18 +47,18 @@ function destroy(id) {
 
 <template>
   <LayoutAuthenticated>
-    <Head title="Permissions" />
+    <Head title="权限" />
     <SectionMain>
       <SectionTitleLineWithButton
         :icon="mdiAccountKey"
-        title="Permissions"
+        title="权限"
         main
       >
         <BaseButton
           v-if="can.delete"
           :route-name="route('admin.permission.create')"
           :icon="mdiPlus"
-          label="Add"
+          label="添加"
           color="info"
           rounded-full
           small
@@ -88,10 +88,10 @@ function destroy(id) {
                   focus:ring-indigo-200
                   focus:ring-opacity-50
                 "
-                placeholder="Search"
+                placeholder="搜索"
               />
               <BaseButton
-                label="Search"
+                label="搜索"
                 type="submit"
                 color="info"
                 class="ml-4 inline-flex items-center px-4 py-2"
@@ -105,15 +105,15 @@ function destroy(id) {
           <thead>
             <tr>
               <th>
-                <Sort label="Name" attribute="name" />
+                <Sort label="名称" attribute="name" />
               </th>
-              <th v-if="can.edit || can.delete">Actions</th>
+              <th v-if="can.edit || can.delete">操作</th>
             </tr>
           </thead>
 
           <tbody>
             <tr v-for="permission in permissions.data" :key="permission.id">
-              <td data-label="Name">
+              <td data-label="名称">
                 <Link
                   :href="route('admin.permission.show', permission.id)"
                   class="

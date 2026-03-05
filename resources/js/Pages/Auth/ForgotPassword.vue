@@ -30,7 +30,7 @@ const submit = () => {
 
 <template>
   <LayoutGuest>
-    <Head title="Forgot Password" />
+    <Head title="忘记密码" />
 
     <SectionFullScreen
       v-slot="{ cardClass }"
@@ -43,7 +43,7 @@ const submit = () => {
       >
         <FormValidationErrors />
 
-        <NotificationBarInCard 
+        <NotificationBarInCard
           v-if="status"
           color="info"
         >
@@ -52,13 +52,13 @@ const submit = () => {
 
         <FormField>
           <div class="mb-4 text-sm text-gray-600">
-            Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
+            忘记密码了？没问题。请告诉我们您的邮箱地址，我们会发送一个密码重置链接给您，您可以设置新密码。
           </div>
         </FormField>
 
         <FormField
-          label="Email"
-          help="Please enter your email"
+          label="邮箱"
+          help="请输入邮箱"
         >
           <FormControl
             v-model="form.email"
@@ -75,14 +75,14 @@ const submit = () => {
           <BaseButton
             type="submit"
             color="info"
-            label="Email link"
+            label="发送链接"
             :class="{ 'opacity-25': form.processing }"
             :disabled="form.processing"
           />
           <Link
             :href="route('login')"
           >
-            Back to login
+            返回登录
           </Link>
         </BaseLevel>
       </CardBox>

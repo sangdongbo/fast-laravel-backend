@@ -105,7 +105,7 @@ const passwordForm = useForm({
 
           <template #footer>
             <BaseButtons>
-              <BaseButton color="info" type="submit" label="Submit" />
+              <BaseButton color="info" type="submit" label="提交" />
             </BaseButtons>
           </template>
         </CardBox>
@@ -191,7 +191,7 @@ const passwordForm = useForm({
 
           <template #footer>
             <BaseButtons>
-              <BaseButton type="submit" color="info" label="Submit" />
+              <BaseButton type="submit" color="info" label="提交" />
             </BaseButtons>
           </template>
         </CardBox>

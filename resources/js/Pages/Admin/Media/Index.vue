@@ -39,7 +39,7 @@ const form = useForm({
 const formDelete = useForm({})
 
 function destroy(id) {
-  if (confirm("Are you sure you want to delete?")) {
+  if (confirm("确定要删除吗？")) {
     formDelete.delete(route("admin.media.destroy", id))
   }
 }
@@ -47,18 +47,18 @@ function destroy(id) {
 
 <template>
   <LayoutAuthenticated>
-    <Head title="Media" />
+    <Head title="媒体" />
     <SectionMain>
       <SectionTitleLineWithButton
         :icon="mdiMultimedia"
-        title="Media"
+        title="媒体"
         main
       >
         <BaseButton
           v-if="can.delete"
           :route-name="route('admin.media.create')"
           :icon="mdiPlus"
-          label="Add"
+          label="添加"
           color="info"
           rounded-full
           small
@@ -88,10 +88,10 @@ function destroy(id) {
                   focus:ring-indigo-200
                   focus:ring-opacity-50
                 "
-                placeholder="Search"
+                placeholder="搜索"
               />
               <BaseButton
-                label="Search"
+                label="搜索"
                 type="submit"
                 color="info"
                 class="ml-4 inline-flex items-center px-4 py-2"
@@ -104,19 +104,19 @@ function destroy(id) {
         <table>
           <thead>
             <tr>
-              <th>File</th>
+              <th>文件</th>
               <th>
-                <Sort label="Name" attribute="name" />
+                <Sort label="名称" attribute="name" />
               </th>
-              <th>Type</th>
-              <th>Created</th>
-              <th v-if="can.edit || can.delete">Actions</th>
+              <th>类型</th>
+              <th>创建时间</th>
+              <th v-if="can.edit || can.delete">操作</th>
             </tr>
           </thead>
 
           <tbody>
             <tr v-for="media in items.data" :key="media.id">
-              <td data-label="File">
+              <td data-label="文件">
                 <div class="w-32 rounded">
                   <div v-if="media.aggregateType !== 'image'"  v-html="media.mediaTypeIcon">
                   </div>
@@ -125,7 +125,7 @@ function destroy(id) {
                   </div>
                 </div>
               </td>
-              <td data-label="Name">
+              <td data-label="名称">
                 <Link
                   :href="route('admin.media.show', media.id)"
                   class="
@@ -138,10 +138,10 @@ function destroy(id) {
                   {{ media.filename }}
                 </Link>
               </td>
-              <td data-label="variant_name">
+              <td data-label="类型">
                 {{ media.type }}
               </td>
-              <td data-label="created_at">
+              <td data-label="创建时间">
                 {{ new Date(media.createdAt).toLocaleString() }}
               </td>
               <td

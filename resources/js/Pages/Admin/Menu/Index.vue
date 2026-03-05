@@ -40,7 +40,7 @@ const form = useForm({
 const formDelete = useForm({})
 
 function destroy(id) {
-  if (confirm("Are you sure you want to delete?")) {
+  if (confirm("确定要删除吗？")) {
     formDelete.delete(route("admin.menu.destroy", id))
   }
 }
@@ -48,18 +48,18 @@ function destroy(id) {
 
 <template>
   <LayoutAuthenticated>
-    <Head title="Menus" />
+    <Head title="菜单" />
     <SectionMain>
       <SectionTitleLineWithButton
         :icon="mdiMenu"
-        title="Menus"
+        title="菜单"
         main
       >
         <BaseButton
           v-if="can.delete"
           :route-name="route('admin.menu.create')"
           :icon="mdiPlus"
-          label="Add"
+          label="添加"
           color="info"
           rounded-full
           small
@@ -89,10 +89,10 @@ function destroy(id) {
                   focus:ring-indigo-200
                   focus:ring-opacity-50
                 "
-                placeholder="Search"
+                placeholder="搜索"
               />
               <BaseButton
-                label="Search"
+                label="搜索"
                 type="submit"
                 color="info"
                 class="ml-4 inline-flex items-center px-4 py-2"
@@ -106,21 +106,21 @@ function destroy(id) {
           <thead>
             <tr>
               <th>
-                <Sort label="Name" attribute="name" />
+                <Sort label="名称" attribute="name" />
               </th>
               <th>
-                Description
+                描述
               </th>
-              <th v-if="can.edit || can.delete || can.manage">Actions</th>
+              <th v-if="can.edit || can.delete || can.manage">操作</th>
             </tr>
           </thead>
 
           <tbody>
             <tr v-for="menu in menus.data" :key="menu.id">
-              <td data-label="Name">
+              <td data-label="名称">
                   {{ menu.name }}
               </td>
-               <td data-label="Description">
+               <td data-label="描述">
                   {{ menu.description }}
               </td>
               <td

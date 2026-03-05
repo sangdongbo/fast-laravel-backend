@@ -15,7 +15,7 @@ defineProps({
 const emit = defineEmits(['menu-click', 'aside-lg-close-click'])
 
 const logoutItem = computed(() => ({
-  name: 'Logout',
+  name: '登出',
   icon: mdiLogout,
   color: 'info',
   isLogout: true

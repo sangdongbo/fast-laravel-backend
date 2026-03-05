@@ -14,22 +14,22 @@ import {
   export default [
     {
       icon: mdiMenu,
-      label: 'Sample menu',
+      label: '示例菜单',
       menu: [
         {
           icon: mdiClockOutline,
-          label: 'Item One'
+          label: '项目一'
         },
         {
           icon: mdiCloud,
-          label: 'Item Two'
+          label: '项目二'
         },
         {
           isDivider: true
         },
         {
           icon: mdiCrop,
-          label: 'Item Last'
+          label: '最后一项'
         }
       ]
     },
@@ -38,30 +38,30 @@ import {
       menu: [
         {
           icon: mdiAccount,
-          label: 'My Profile',
+          label: '我的资料',
           to: '/admin/edit-account-info'
         },
         {
           icon: mdiCogOutline,
-          label: 'Settings'
+          label: '设置'
         },
         {
           icon: mdiEmail,
-          label: 'Messages'
+          label: '消息'
         },
         {
           isDivider: true
         },
         {
           icon: mdiLogout,
-          label: 'Log Out',
+          label: '登出',
           isLogout: true
         }
       ]
     },
     {
       icon: mdiThemeLightDark,
-      label: 'Light/Dark',
+      label: '亮色/暗色',
       isDesktopNoLabel: true,
       isToggleLightDark: true
     },
@@ -74,7 +74,7 @@ import {
     },
     {
       icon: mdiLogout,
-      label: 'Log out',
+      label: '登出',
       isDesktopNoLabel: true,
       isLogout: true
     }

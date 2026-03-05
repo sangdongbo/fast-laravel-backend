@@ -34,18 +34,18 @@ const props = defineProps({
 
 <template>
   <LayoutAuthenticated>
-    <Head title="Menu Items" />
+    <Head title="菜单项" />
     <SectionMain>
       <SectionTitleLineWithButton
         :icon="mdiLink"
-        title="Menu Items"
+        title="菜单项"
         main
       >
         <BaseButtons type="justify-start lg:justify-end" no-wrap>
           <BaseButton
             :route-name="route('admin.menu.index')"
             :icon="mdiArrowLeftBoldOutline"
-            label="Back"
+            label="返回"
             color="white"
             rounded-full
             small
@@ -54,7 +54,7 @@ const props = defineProps({
             v-if="can.delete"
             :route-name="route('admin.menu.item.create', menu.id)"
             :icon="mdiPlus"
-            label="Add"
+            label="添加"
             color="info"
             rounded-full
             small
@@ -83,9 +83,9 @@ const props = defineProps({
                   lg:block
                 "
               >
-                Name
+                名称
               </td>
-              <td data-label="Name">
+              <td data-label="名称">
                 {{ menu.name }}
               </td>
             </tr>
@@ -100,9 +100,9 @@ const props = defineProps({
                   lg:block
                 "
               >
-                Machine name
+                机器名称
               </td>
-              <td data-label="Machine Name">
+              <td data-label="机器名称">
                 {{ menu.machine_name }}
               </td>
             </tr>
@@ -112,15 +112,15 @@ const props = defineProps({
           <thead>
             <tr>
               <th>
-                Name
+                名称
               </th>
               <th>
-                Description
+                描述
               </th>
               <th>
-                Enable
+                启用
               </th>
-              <th v-if="can.edit || can.delete">Actions</th>
+              <th v-if="can.edit || can.delete">操作</th>
             </tr>
           </thead>
 
